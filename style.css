@@ -1,0 +1,243 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+  color: #275C7A;
+  background: url('images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #F0F8FF;
+  background-blend-mode: lighten;
+}
+
+
+h1{
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+  font-size: 3.2rem; /* Increased from default */
+  color: #275C7A;
+}
+h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+  font-size: 2.2rem; /* Increased from default */
+  color: #275C7A;
+}
+
+/* Hero Section */
+.hero {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-color: #7AB6E2;
+}
+
+.hero-date {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(39, 92, 122, 0.7);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  display: inline-block;
+  margin-top: 0.5rem;
+  animation: pulse-glow 2.5s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(255, 255, 255, 0.7);
+  }
+}
+
+
+
+/* Navigation */
+.site-nav {
+  position: sticky;
+  top: 0;
+  background: #A2D4F5;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  border-bottom: 1px solid #7AB6E2;
+  z-index: 10;
+}
+.site-nav a {
+  color: #275C7A;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* Sections */
+section {
+  max-width: 800px;
+  margin: 5rem auto;
+  padding: 1rem 1rem; /* ⬅️ Adds space top and bottom */
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+section.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  background: #A2D4F5;
+  color: #275C7A;
+}
+
+/* Language Toggle Button */
+.lang-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: white;
+  border: 1px solid #7AB6E2;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: #275C7A;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Story Image */
+.story-image {
+  margin: 2rem auto;
+  max-width: 700px;
+  width: 90%;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes soft-blink {
+  0%, 100% {
+    color: #144e75;
+    background-color: #E2F1FB;
+  }
+  50% {
+    color: #ffffff;
+    background-color: #7AB6E2;
+  }
+}
+
+.wedding-info {
+  background-color: #E2F1FB;
+  color: #144e75;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 1.2rem 1.5rem;
+  margin-top: 2rem;
+  border-left: 6px solid #7AB6E2;
+  border-radius: 10px;
+  display: inline-block;
+  line-height: 1.8;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: soft-blink 2s infinite;
+}
+
+
+section p {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+section#gallery p,
+section#gifts p {
+  font-style: italic;
+  color: #275C7A;
+  opacity: 0.85;
+}
+
+.single-collage {
+  text-align: center;
+}
+
+.collage-wrapper {
+  max-width: 500px;
+  margin: 2rem auto;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.collage-wrapper img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.collage-wrapper img:hover {
+  transform: scale(1.01);
+}
+
+.section-story {
+  background-color: #F8FBFF;
+}
+
+.section-details {
+  background-color: #E2F1FB;
+}
+
+.section-rsvp {
+  background-color: #FFF8F0;
+}
+
+.section-gallery {
+  background-color: #F5F0FA;
+}
+
+.section-gifts {
+  background-color: #FDF4F4;
+}
+.footer-note {
+  font-size: 0.8rem;
+  color: #144e75;
+  opacity: 0.7;
+  margin-top: 0.5rem;
+}
+
+
+.section-gifts p {
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #275C7A;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-top: 1rem;
+}
+
+.honeymoon-image-wrapper {
+  max-width: 480px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.honeymoon-image-wrapper img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
