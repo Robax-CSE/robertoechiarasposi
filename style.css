@@ -56,7 +56,6 @@ h2 {
 }
 
 
-
 /* Navigation */
 .site-nav {
   position: sticky;
@@ -240,4 +239,25 @@ section#gifts p {
   width: 100%;
   border-radius: 10px;
   display: block;
+}
+
+
+
+/* Optimize Mobile view */
+
+.hero-content {
+  padding-top: 3rem;
+}
+
+@media (max-width: 600px) {
+  .lang-toggle {
+    top: 1.5rem;
+    right: 1rem;
+    transform: scale(0.9);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+h1 {
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
 }
