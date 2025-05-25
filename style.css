@@ -24,34 +24,46 @@ h2 {
 
 /* Hero Section */
 .hero {
-  height: 20vh;
+  position: relative;
+  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  background-color: #7AB6E2;
+  background: url('images/backheader.png') center center / cover no-repeat;
+  background-attachment: scroll;
+  overflow: hidden;
+}
+
+/* Keep content above the overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-date {
   font-size: 1.8rem;
   font-weight: 600;
   color: #fff;
-  text-shadow: 1px 1px 4px rgba(39, 92, 122, 0.7);
-  background: rgba(255, 255, 255, 0.2);
-  padding: 0.6rem 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.7rem 1.5rem;
   border-radius: 12px;
-  display: inline-block;
   margin-top: 0.5rem;
-  animation: pulse-glow 2.5s infinite;
+  animation: pulse-glow 2.5s ease-in-out infinite;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  position: relative;
 }
+
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 14px 6px rgba(0, 0, 0, 0.5);
   }
   50% {
-    box-shadow: 0 0 16px rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 30px 12px rgba(255, 255, 255, 1);
   }
 }
 
