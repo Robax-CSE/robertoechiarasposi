@@ -13,9 +13,7 @@
   <header class="hero">
     <div class="hero-content">
       <h1 data-en="Roberto & Chiara" data-it="Roberto & Chiara">Roberto & Chiara</h1>
-      <p class="hero-date" data-en="We're Getting Married – 8th May 2026" data-it="Ci sposiamo – 8 Maggio 2026">
-  Ci sposiamo – 8 Maggio 2026
-</p>
+      <div id="countdown" class="hero-date"></div>
     </div>
   </header>
 
@@ -147,6 +145,30 @@
   document.querySelector('.lang-toggle').textContent = '🇬🇧 English';
 });
   </script>
+<script>
+function updateCountdown() {
+  const targetDate = new Date("May 8, 2026 10:15:00").getTime();
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+
+  const countdownElement = document.getElementById("countdown");
+
+  if (distance < 0) {
+    countdownElement.innerHTML = "Oggi è il grande giorno! 💍";
+    return;
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  countdownElement.innerHTML =
+    `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
 
 </body>
 </html>
