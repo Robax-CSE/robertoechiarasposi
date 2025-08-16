@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Puglia – Roberto & Chiara</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="puglia-style.css">
+</head>
+<body>
+
+<nav class="topnav" role="navigation" aria-label="Sezioni pagina">
+  <div class="topnav-inner">
+    <a class="brand" href="#top" data-en="Explore Puglia" data-it="Explore Puglia">Explore Puglia</a>
+    <ul class="nav-links">
+      <li><a href="#accommodation" data-en="Accommodation" data-it="Alloggi">Alloggi</a></li>
+      <li><a href="#car-hire" data-en="Car Hire" data-it="Noleggio Auto">Noleggio Auto</a></li>
+      <li><a href="#explore" data-en="What to See" data-it="Cosa Vedere">Cosa Vedere</a></li>
+    </ul>
+    <button class="lang-toggle" type="button" onclick="toggleLanguage()" aria-label="Cambia lingua">🇬🇧 English</button>
+  </div>
+</nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero" id="top">
+    <div class="hero-content">
+      <h1 data-en="Welcome to Puglia" data-it="Benvenuti in Puglia">Benvenuti in Puglia</h1>
+      <p data-en="Your travel companion for our wedding celebration!" data-it="La vostra guida per il nostro matrimonio!">
+        La vostra guida per il nostro matrimonio!
+      </p>
+    </div>
+  </header>
+  
+   <!-- INTRODUCTION & AIRPORTS -->
+  <p class="hero-intro"
+     data-en="Our wedding will take place in the heart of Salento, surrounded by olive trees and the sea breeze. The two nearest airports are Brindisi (BDS) – about 1 hour away – and Bari (BRI) – about 2 hours and 30 minutes away."
+     data-it="Il nostro matrimonio si terrà nel cuore del Salento, tra ulivi e brezza marina. Gli aeroporti più vicini sono Brindisi (BDS) – a circa 1 ora – e Bari (BRI) – a circa 2 ore e mezza di distanza.">
+    Il nostro matrimonio si terrà nel cuore del Salento, tra ulivi e brezza marina.
+    Gli aeroporti più vicini sono Brindisi (BDS) – a circa 1 ora – e Bari (BRI) – a circa 2 ore e mezza di distanza.
+  </p>
+
+  <!-- Embedded Maps -->
+  <div class="airport-maps">
+    <div class="map-item">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.7807816387926!2d17.9453492!3d40.6567625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13467a08b74a2e29%3A0x66e96d2f414ca34b!2sBrindisi%20Airport!5e0!3m2!1sen!2suk!4v1755272747485!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p class="map-label">Brindisi (BDS)</p>
+    </div>
+
+    <div class="map-item">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3004.9327595258815!2d16.759243576672507!3d41.13599381155002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1347ef757723e589%3A0xd0baa738e6f01b02!2sBari%20International%20Airport-Karol%20Wojtyla!5e0!3m2!1sen!2suk!4v1755272888339!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p class="map-label">Bari (BRI)</p>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ACCOMMODATION -->
+  <section id="accommodation" class="fade-section section-puglia accommodation">
+    <h2 data-en="Best Places to Book Accommodation" data-it="Dove Prenotare l’Alloggio">
+      Dove Prenotare l’Alloggio
+    </h2>
+
+    <p class="intro-text"
+      data-en="We’ve selected towns that are peaceful, welcoming, and ideally located near the wedding. All of them offer safety, charm, and great local hospitality."
+      data-it="Abbiamo selezionato paesi tranquilli, accoglienti e perfettamente collegati alle location del matrimonio. Tutti offrono sicurezza, fascino e ottima ospitalità locale.">
+      Abbiamo selezionato paesi tranquilli, accoglienti e perfettamente collegati alle location del matrimonio. Tutti offrono sicurezza, fascino e ottima ospitalità locale.
+    </p>
+
+    <div class="accommodation-grid">
+      <!-- Aradeo -->
+      <div class="accommodation-card">
+        <h3>Aradeo</h3>
+        <p
+          data-en="An authentic and quiet village, perfect to relax near the ceremony location."
+          data-it="Un borgo autentico e silenzioso, ideale per rilassarsi vicino alla cerimonia.">
+          Un borgo autentico e silenzioso, ideale per rilassarsi vicino alla cerimonia.
+        </p>
+        <ul>
+          <li>
+            <a href="https://www.booking.com/city/it/aradeo.html" target="_blank" rel="noopener"
+              data-en="Book a place to stay in Aradeo" data-it="Prenota un alloggio ad Aradeo">Prenota un alloggio ad Aradeo</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Galatina -->
+      <div class="accommodation-card">
+        <h3>Galatina</h3>
+        <p
+          data-en="Charming historic center with great services and a true Salento atmosphere."
+          data-it="Centro storico ricco di fascino, con ottimi servizi e atmosfera salentina.">
+          Centro storico ricco di fascino, con ottimi servizi e atmosfera salentina.
+        </p>
+        <ul>
+          <li>
+            <a href="https://www.booking.com/city/it/galatina.html" target="_blank" rel="noopener"
+              data-en="Book a place to stay in Galatina" data-it="Prenota un alloggio a Galatina">Prenota un alloggio a Galatina</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Neviano -->
+      <div class="accommodation-card">
+        <h3>Neviano</h3>
+        <p
+          data-en="A small, quiet town, great if you’re after authenticity and relaxation."
+          data-it="Un piccolo paese tranquillo, perfetto per chi cerca autenticità e relax.">
+          Un piccolo paese tranquillo, perfetto per chi cerca autenticità e relax.
+        </p>
+        <ul>
+          <li>
+            <a href="https://www.booking.com/searchresults.html?city=Neviano%2C%20Italy" target="_blank" rel="noopener"
+              data-en="Book a place to stay in Neviano" data-it="Prenota un alloggio a Neviano">Prenota un alloggio a Neviano</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Cutrofiano -->
+      <div class="accommodation-card">
+        <h3>Cutrofiano</h3>
+        <p
+          data-en="A land of ceramics and heritage, offering a true taste of art and culture."
+          data-it="Terra di ceramiche e tradizione, dove vivere arte e cultura.">
+          Terra di ceramiche e tradizione, dove vivere arte e cultura.
+        </p>
+        <ul>
+          <li>
+            <a href="https://www.booking.com/searchresults.html?city=Cutrofiano%2C%20Italy" target="_blank" rel="noopener"
+              data-en="Book a place to stay in Cutrofiano" data-it="Prenota un alloggio a Cutrofiano">Prenota un alloggio a Cutrofiano</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+
+
+    <!-- CAR RENTAL -->
+    <section id="car-hire" class="fade-section section-puglia car-hire">
+  <h2 data-en="Websites for Hiring a Car" data-it="Noleggio Auto Consigliato">Noleggio Auto Consigliato</h2>
+
+  <p class="intro-text"
+     data-en="Renting a car is the best way to explore Salento freely and comfortably. Here are some trusted websites where you can book your vehicle in advance and pick it up directly at the airport." 
+     data-it="Noleggiare un’auto è il modo migliore per esplorare il Salento in totale libertà e comfort. Qui sotto troverete siti affidabili dove prenotare in anticipo e ritirare il veicolo direttamente in aeroporto.">
+    Noleggiare un’auto è il modo migliore per esplorare il Salento in totale libertà e comfort. Qui sotto troverete siti affidabili dove prenotare in anticipo e ritirare il veicolo direttamente in aeroporto.
+  </p>
+
+  <div class="car-hire-grid">
+
+    <div class="car-hire-card">
+      <h3>Rentalcars.com</h3>
+      <a href="https://www.rentalcars.com/" target="_blank" rel="noopener" data-en="Visit the website" data-it="Visita il sito">Visita il sito</a>
+    </div>
+
+    <div class="car-hire-card">
+      <h3>DiscoverCars</h3>
+      <a href="https://www.discovercars.com/" target="_blank" rel="noopener" data-en="Visit the website" data-it="Visita il sito">Visita il sito</a>
+    </div>
+
+    <div class="car-hire-card">
+      <h3>Avis Italia</h3>
+      <a href="https://www.avisautonoleggio.it/" target="_blank" rel="noopener" data-en="Visit the website" data-it="Visita il sito">Visita il sito</a>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- WHAT TO SEE -->
+  <section id="explore" class="fade-section section-puglia explore">
+    <h2 data-en="Where to Go While in Salento" data-it="Cosa Vedere nel Salento">Cosa Vedere nel Salento</h2>
+
+    <!-- Festa Patronale di Sannicola -->
+    <div class="highlight-hero-sannicola">
+      <img src="images/sannicola.jpg" alt="Luminarie e folla alla Festa Patronale di Sannicola" class="sannicola-full-image">
+      <div class="sannicola-content">
+        <h3 data-en="Sannicola’s Patron Saint Festival in Aradeo" data-it="Festa Patronale di Sannicola ad Aradeo">Festa Patronale di Sannicola ad Aradeo</h3>
+        <p
+          data-en="An authentic Salento celebration just after the wedding. Join Aradeo for two magical days of lights, traditions, and live music."
+          data-it="Una celebrazione autentica del Salento nel weekend successivo al matrimonio. Due giorni magici di luminarie, tradizioni e musica dal vivo nel cuore di Aradeo.">
+          Una celebrazione autentica del Salento nel weekend successivo al matrimonio. Due giorni magici di luminarie, tradizioni e musica dal vivo nel cuore di Sannicola.
+        </p>
+        <ul class="sannicola-program">
+          <li>
+            <strong data-en="Saturday 9 May:" data-it="Sabato 9 Maggio:">Sabato 9 Maggio:</strong>
+            <span data-en="Religious procession + March band in the square" data-it="Processione religiosa + Banda musicale in piazza">
+              Processione religiosa + Banda musicale in piazza
+            </span>
+          </li>
+          <li>
+            <strong data-en="Sunday 10 May:" data-it="Domenica 10 Maggio:">Domenica 10 Maggio:</strong>
+            <span data-en="Morning fair + Evening band concert" data-it="Fiera mattutina + Concerto bandistico serale">
+              Fiera mattutina + Concerto bandistico serale
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Griglia Luoghi -->
+    <div class="explore-grid">
+      <div class="explore-card" style="background-color: #fdf1ed;">
+        <img src="images/alberobello.jpg" alt="Alberobello" class="explore-image">
+        <div class="explore-text">
+          <h3>Alberobello</h3>
+          <p
+            data-en="Iconic trulli and a UNESCO World Heritage site: a fairytale village unique in the world."
+            data-it="Iconici trulli, patrimonio UNESCO, un borgo fiabesco unico al mondo.">
+            Iconici trulli, patrimonio UNESCO, un borgo fiabesco unico al mondo.
+          </p>
+        </div>
+      </div>
+
+      <div class="explore-card" style="background-color: #f2f8f7;">
+        <img src="images/gallipoli.jpg" alt="Gallipoli" class="explore-image">
+        <div class="explore-text">
+          <h3>Gallipoli</h3>
+          <p
+            data-en="A charming seaside town with a picturesque historic center and beautiful beaches."
+            data-it="Affascinante città sul mare con centro storico pittoresco e spiagge splendide.">
+            Affascinante città sul mare con centro storico pittoresco e spiagge splendide.
+          </p>
+        </div>
+      </div>
+
+      <div class="explore-card" style="background-color: #fef8e5;">
+        <img src="images/otranto.jpg" alt="Otranto" class="explore-image">
+        <div class="explore-text">
+          <h3>Otranto</h3>
+          <p
+            data-en="Historic port, millenary cathedral, and a fortress overlooking the sea."
+            data-it="Porto storico, cattedrale millenaria e fortezza affacciata sul mare.">
+            Porto storico, cattedrale millenaria e fortezza affacciata sul mare.
+          </p>
+        </div>
+      </div>
+
+      <div class="explore-card" style="background-color: #eaf4fd;">
+        <img src="images/galatina.jpg" alt="Galatina" class="explore-image">
+        <div class="explore-text">
+          <h3>Galatina</h3>
+          <p
+            data-en="'Barocco' heart of Salento, with churches rich in art and folk culture."
+            data-it="Cuore barocco del Salento, con chiese ricche di arte e cultura popolare.">
+            Cuore barocco del Salento, con chiese ricche di arte e cultura popolare.
+          </p>
+        </div>
+      </div>
+
+      <div class="explore-card" style="background-color: #fcf4f9;">
+        <img src="images/lecce.jpg" alt="Lecce" class="explore-image">
+        <div class="explore-text">
+          <h3>Lecce</h3>
+          <p
+            data-en="The 'Florence of the South': magnificent 'Barocco', elegant squares, and vibrant nightlife."
+            data-it="“Firenze del Sud”: barocco magnifico, piazze eleganti e vibrante vita notturna.">
+            “Firenze del Sud”: barocco magnifico, piazze eleganti e vibrante vita notturna.
+          </p>
+        </div>
+      </div>
+
+      <div class="explore-card" style="background-color: #fdf6ea;">
+        <img src="images/cava.jpg" alt="Cava di Bauxite" class="explore-image">
+        <div class="explore-text">
+          <h3>Cava di Bauxite</h3>
+          <p
+            data-en="A striking copper-colored quarry. <strong>Booking in advance is recommended.</strong>"
+            data-it="Suggestiva cava color rame. <strong>Si consiglia di prenotare in anticipo.</strong>">
+            Suggestiva cava color rame. <strong>Si consiglia di prenotare in anticipo.</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="explore-card" style="background-color: #f0f7ed;">
+        <img src="images/grotte.jpg" alt="Grotte di Castellana" class="explore-image">
+        <div class="explore-text">
+          <h3>Grotte di Castellana</h3>
+          <p
+            data-en="Spectacular caves to explore. <strong>Online booking is required.</strong>"
+            data-it="Grotte spettacolari da esplorare. <strong>È necessaria la prenotazione online.</strong>">
+            Grotte spettacolari da esplorare. <strong>È necessaria la prenotazione online.</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="explore-card" style="background-color: #f7f2ff;">
+        <img src="images/ostuni.jpg" alt="Ostuni" class="explore-image">
+        <div class="explore-text">
+          <h3>Ostuni</h3>
+          <p
+            data-en="The 'White City', an enchanting hilltop town with panoramic views."
+            data-it="La 'Città Bianca', incantevole borgo arroccato con viste panoramiche.">
+            La "Città Bianca", incantevole borgo arroccato con viste panoramiche.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  </main>
+
+  <footer>
+    <p>
+    <a href="index.html"
+     data-en="Back to the wedding site"
+     data-it="Torna al sito del matrimonio">
+     Torna al sito del matrimonio
+    </a>
+  </p>
+    <p class="footer-note">&copy;Copyright © 2025-Today: Roberto Negro – All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleLanguage() {
+      const button = document.querySelector('.lang-toggle');
+      const isEnglish = button.textContent.includes('English');
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.innerHTML = isEnglish ? el.getAttribute('data-en') : el.getAttribute('data-it');
+      });
+      button.textContent = isEnglish ? '🇮🇹 Italiano' : '🇬🇧 English';
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('[data-it]').forEach(el => {
+        el.innerHTML = el.getAttribute('data-it');
+      });
+      document.querySelector('.lang-toggle').textContent = '🇬🇧 English';
+    });
+
+    const faders = document.querySelectorAll('.fade-section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    faders.forEach(section => observer.observe(section));
+  </script>
+<script>
+  // Evidenzia la voce di menu in base alla sezione in viewport
+  const sections = [
+    document.getElementById('accommodation'),
+    document.getElementById('car-hire'),
+    document.getElementById('explore')
+  ].filter(Boolean);
+
+  const navLinks = Array.from(document.querySelectorAll('.nav-links a'));
+
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = entry.target.getAttribute('id');
+      const link = navLinks.find(a => a.getAttribute('href') === `#${id}`);
+      if (!link) return;
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+  }, {
+    rootMargin: "-40% 0px -55% 0px", // attiva circa quando la sezione è al centro
+    threshold: 0
+  });
+
+  sections.forEach(sec => spy.observe(sec));
+
+  // Migliora accessibilità: click su brand porta in cima
+  document.querySelector('.topnav .brand')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    navLinks.forEach(a => a.classList.remove('active'));
+  });
+</script>
+
+</body>
+</html>

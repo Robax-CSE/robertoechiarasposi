@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OGGI SPOSI !!!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP NAV (tabs + toggle lingua) -->
+  <nav class="topnav" role="navigation" aria-label="Sezioni pagina">
+    <div class="topnav-inner">
+      <a class="brand" href="#top" data-en="Roberto & Chiara" data-it="Roberto & Chiara">Roberto & Chiara</a>
+      <ul class="nav-links">
+        <li><a href="#story"   data-en="Story"   data-it="Storia">Storia</a></li>
+        <li><a href="#details" data-en="Details" data-it="Dettagli">Dettagli</a></li>
+        <li><a href="#rsvp"    data-en="RSVP"    data-it="Conferma">Conferma</a></li>
+        <li><a href="#gallery" data-en="Gallery" data-it="Galleria">Galleria</a></li>
+        <li><a href="#gifts"   data-en="Gifts"   data-it="Regali">Regali</a></li>
+        <li><a href="#puglia"  data-en="Puglia Info" data-it="Info Puglia">Info Puglia</a></li>
+      </ul>
+      <button class="lang-toggle" type="button" onclick="toggleLanguage()" aria-label="Cambia lingua">🇬🇧 English</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="hero-content">
+      <h1 data-en="Roberto & Chiara" data-it="Roberto & Chiara">Roberto & Chiara</h1>
+      <div id="countdown" class="hero-date"></div>
+    </div>
+  </header>
+
+  <!-- STORIA (con immagine) -->
+  <section id="story" class="fade-section section-story section-row">
+    <div class="section-inner">
+      <div class="section-media">
+        <img src="images/story.jpg" alt="La Nostra Storia" class="story-image">
+      </div>
+      <div class="section-text">
+        <h2 data-en="Our Story" data-it="La Nostra Storia">La Nostra Storia</h2>
+        <p
+          data-en="We met by chance, but everything that followed felt like destiny. From that moment on, every glance, every word, and every smile drew us closer, as if time itself had been waiting for us to meet. We’ve laughed, dreamed, traveled, and built memories that made us inseparable. Now, with hearts full of love and gratitude, we’re ready to say “I do” surrounded by those who mean the most to us."
+          data-it="Ci siamo conosciuti per caso, ma tutto il resto è stato predestinato. Da quel momento, ogni sguardo, ogni parola e ogni sorriso ci ha avvicinati sempre di più, come se il tempo aspettasse solo il nostro incontro. Abbiamo riso, sognato, viaggiato e costruito ricordi che ci hanno reso inseparabili. Ora, con il cuore pieno di gratitudine e amore, siamo pronti a dire “sì” davanti a chi amiamo di più.">
+          Ci siamo conosciuti per caso, ma tutto il resto è stato predestinato. Da quel momento, ogni sguardo, ogni parola e ogni sorriso ci ha avvicinati sempre di più, come se il tempo aspettasse solo il nostro incontro. Abbiamo riso, sognato, viaggiato e costruito ricordi che ci hanno reso inseparabili. Ora, con il cuore pieno di gratitudine e amore, siamo pronti a dire “sì” davanti a chi amiamo di più.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETTAGLI (con immagine di copertina + mappe nel testo) -->
+  <section id="details" class="fade-section section-details section-row reverse">
+  <div class="section-inner">
+    <!-- Immagine di copertina (puoi cambiarla o toglierla) -->
+
+
+    <div class="section-text">
+      <h2 data-en="Wedding Details" data-it="Dettagli del Matrimonio">Dettagli del Matrimonio</h2>
+      <!-- Put this inside the "Dettagli del Matrimonio" section -->
+      <p id="wedding-date" class="wedding-date" data-text="Data: 8 Maggio 2026"></p>
+
+
+      <!-- 🔹 DUE LOCATION AFFIANCATE -->
+      <div class="location-wrapper">
+        <!-- CERIMONIA -->
+        <div class="location-block">
+          <h3 data-en="Ceremony – Church 10:15am" data-it="Cerimonia – Chiesa 10:15am">
+            Cerimonia – Chiesa 10:15am
+          </h3>
+          <div class="map-frame">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.5102609330415!2d18.12762267654899!3d40.13091627298461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13441f3a64221c1b%3A0x2bf7a8fba444324f!2sChurch%20of%20Saint%20Nicholas%20Bishop!5e0!3m2!1sen!2suk!4v1747831747838!5m2!1sen!2suk"
+              width="100%" height="280" style="border:0;" allowfullscreen loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <p class="address">
+            Piazzetta Pio XII, 40<br>73040 Aradeo LE, Italy
+          </p>
+        </div>
+
+        <!-- RICEVIMENTO -->
+        <div class="location-block">
+          <h3 data-en="Reception – Venue" data-it="Ricevimento – Location">
+            Ricevimento – Location
+          </h3>
+          <div class="map-frame">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.1614920819584!2d18.31882887655089!3d40.18321936981761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13443c1f30bdddff%3A0xb95c52bd2661c6c5!2sTenuta%20Montenari!5e0!3m2!1sen!2suk!4v1747831824259!5m2!1sen!2suk"
+              width="100%" height="280" style="border:0;" allowfullscreen loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <p class="address">
+            S.P 153 Castrignano D.G. – Carpignano S<br>73020 Carpignano Salentino LE, Italy
+          </p>
+        </div>
+      </div>
+      <!-- /location-wrapper -->
+    </div>
+  </div>
+    <!-- inside the Dettagli section, after the maps -->
+  <div class="extra-info">
+    <span
+      data-en="For more information on booking accommodation and transport, visit the Puglia Info page:"
+      data-it="Per ulteriori informazioni su alloggi e trasporti, visita la pagina Info Puglia:">
+      Per ulteriori informazioni su alloggi e trasporti, visita la pagina Info Puglia:
+    </span>
+    <a href="puglia.html" target="_blank" rel="noopener" class="puglia-btn"
+      data-en="Open Puglia Info" data-it="Apri Info Puglia">
+      Apri Info Puglia
+    </a>
+  </div>
+</section>
+
+  <!-- RSVP (SENZA immagine → full width testo) -->
+  <section id="rsvp" class="fade-section section-rsvp section-row">
+    <div class="section-inner">
+      <div class="section-text">
+        <h2 data-en="RSVP" data-it="Conferma">Conferma</h2>
+        <p data-en="Please let us know if you can participate by the 8th February 2026."
+           data-it="Per favore, fateci sapere se potete partecipare entro l'8 Febbraio 2026.">
+           Per favore, fateci sapere se potete partecipare entro l'8 Febbraio 2026.
+        </p>
+        <a href="https://forms.gle/Za9HE9Px4zR4zSFT8" target="_blank" rel="noopener"
+           data-en="Click here to RSVP" data-it="Clicca qui per confermare">Clicca qui per confermare</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERIA (con immagine) -->
+  <section id="gallery" class="fade-section section-gallery section-row reverse">
+    <div class="section-inner">
+      <div class="section-media">
+        <div class="collage-wrapper">
+          <img src="images/collage.jpeg" alt="Our Wedding Collage">
+        </div>
+      </div>
+      <div class="section-text">
+        <h2 data-en="Gallery" data-it="Galleria Fotografica">Galleria Fotografica</h2>
+        <p class="gallery-note"
+           data-en="Guests will soon be able to upload their photos to a shared album here."
+           data-it="Presto sarà possibile per gli ospiti caricare le loro foto in un album condiviso.">
+           Presto sarà possibile per gli ospiti caricare le loro foto in un album condiviso.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGALI (con immagine) -->
+  <section id="gifts" class="fade-section section-gifts section-row">
+    <div class="section-inner">
+      <div class="section-media">
+        <div class="honeymoon-image-wrapper">
+          <img src="images/australia.png" alt="Funny illustration of honeymoon to Australia">
+        </div>
+      </div>
+      <div class="section-text">
+        <h2 data-en="Gifts" data-it="Regali">Regali</h2>
+        <p data-en="Our journey is about to begin ... the first stop will be: <strong>Australia!</strong> If you’d like to contribute to making it an unforgettable experience…"
+          data-it="Il nostro viaggio sta per iniziare ... la prima tappa sarà: <strong>Australia!</strong> Se volete contribuire anche voi a renderla un’esperienza indimenticabile…">
+          Il nostro viaggio sta per iniziare ... la prima tappa sarà: <strong>Australia!</strong> Se volete contribuire anche voi a renderla un’esperienza indimenticabile…
+        </p>
+
+        <!-- Coordinate bancarie -->
+        <div class="bank-details">
+          <h3 data-en="From UK bank to UK account" data-it="Da banca inglese a conto inglese">Da banca inglese a conto inglese</h3>
+          <p><strong data-en="Name" data-it="Nome">Nome</strong>: Roberto Negro Chiara Priori</p>
+          <p><strong data-en="Sort Code" data-it="Sort Code">Sort Code</strong>: 04-00-03</p>
+          <p><strong data-en="Account Number" data-it="Account Number">Account Number</strong>: 54409370</p>
+          
+          <hr class="bank-separator">
+
+          <h3 data-en="From Italian bank to Italian account" data-it="Da banca italiana a conto italiano">Da banca italiana a conto italiano</h3>
+          <p><strong data-en="Name" data-it="Nome">Nome</strong>: Roberto Negro Chiara Priori</p>
+          <p><strong data-en="IBAN" data-it="IBAN">IBAN</strong>: IT98K0760103200001076062171</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PUGLIA (con immagine) -->
+  <section id="puglia" class="fade-section section-puglia section-row reverse">
+    <div class="section-inner">
+      <div class="section-media">
+        <img src="images/puglia.png" alt="Beautiful landscape of Puglia" class="puglia-image">
+      </div>
+      <div class="section-text">
+        <h2 data-en="Discover Puglia" data-it="Scopri la Puglia">Scopri la Puglia</h2>
+        <p data-en="Puglia is a land of sun, sea, and unforgettable traditions. 
+          In this guide, you’ll find not only our favorite places to visit and enjoy during your stay for the wedding, 
+          but also tips on booking accommodation and transport to make your trip as easy and enjoyable as possible."
+           data-it="La Puglia è una terra di sole, mare e tradizioni indimenticabili. 
+           In questa guida troverete non solo i nostri luoghi preferiti da visitare e godervi durante il vostro soggiorno per il matrimonio, 
+           ma anche consigli su come prenotare l’alloggio e i trasporti per rendere il viaggio più semplice e piacevole.">
+          La Puglia è una terra di sole, mare e tradizioni indimenticabili. 
+          In questa guida troverete non solo i nostri luoghi preferiti da visitare e godervi durante il vostro soggiorno per il matrimonio, 
+          ma anche consigli su come prenotare l’alloggio e i trasporti per rendere il viaggio più semplice e piacevole.
+        </p>
+        <a href="puglia.html" target="_blank" rel="noopener" class="puglia-btn"
+           data-en="View the Puglia Guide" data-it="Guarda la Guida della Puglia">Guarda la Guida della Puglia</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p data-en="We can’t wait to celebrate with you! ❤"
+       data-it="Non vediamo l'ora di festeggiare con voi! ❤">Non vediamo l'ora di festeggiare con voi! ❤</p><br>
+    <p class="footer-note">&copy; Copyright © 2025-Today: Roberto Negro – All rights reserved.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Fade-in animazioni per le sezioni
+    const faders = document.querySelectorAll('.fade-section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    faders.forEach(section => observer.observe(section));
+
+    // Countdown
+    function updateCountdown() {
+      const targetDate = new Date("May 8, 2026 10:15:00").getTime();
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      const countdownElement = document.getElementById("countdown");
+
+      if (distance < 0) {
+        countdownElement.textContent = "Oggi è il grande giorno! 💍";
+        return;
+      }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      countdownElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Scrollspy per evidenziare la tab attiva
+    const spySections = ['story','details','rsvp','gallery','gifts','puglia']
+      .map(id => document.getElementById(id))
+      .filter(Boolean);
+    const spyLinks = Array.from(document.querySelectorAll('.nav-links a'));
+
+    const spyObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const id = entry.target.id;
+        const link = spyLinks.find(a => a.getAttribute('href') === `#${id}`);
+        if (!link) return;
+        if (entry.isIntersecting) {
+          spyLinks.forEach(a => a.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+    spySections.forEach(sec => spyObs.observe(sec));
+
+    // Click sul brand → torna su
+    document.querySelector('.topnav .brand')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      spyLinks.forEach(a => a.classList.remove('active'));
+    });
+
+    // Toggle lingua "safe": non rompe <a> o <button>
+    function toggleLanguage() {
+      const button = document.querySelector('.lang-toggle');
+      const isEnglish = button.textContent.includes('English');
+      document.querySelectorAll('[data-en]').forEach(el => {
+        const en = el.getAttribute('data-en');
+        const it = el.getAttribute('data-it');
+        const val = isEnglish ? en : it;
+
+        if (el.tagName === 'A' || el.tagName === 'BUTTON' || el.hasAttribute('data-textonly')) {
+          el.textContent = val;
+        } else {
+          el.innerHTML = val;
+        }
+      });
+      button.textContent = isEnglish ? '🇮🇹 Italiano' : '🇬🇧 English';
+    }
+
+    // All’avvio: forza l’italiano
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('[data-it]').forEach(el => {
+        const it = el.getAttribute('data-it');
+        if (el.tagName === 'A' || el.tagName === 'BUTTON' || el.hasAttribute('data-textonly')) {
+          el.textContent = it;
+        } else {
+          el.innerHTML = it;
+        }
+      });
+      document.querySelector('.lang-toggle').textContent = '🇬🇧 English';
+    });
+  </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const dateEl = document.getElementById("wedding-date");
+  if (!dateEl) return; // ✅ safety guard: esce se non trova l’elemento
+
+  const text = dateEl.getAttribute("data-text");
+
+  function typeEffect() {
+    let i = 0;
+    dateEl.textContent = "";
+    function typing() {
+      if (i < text.length) {
+        dateEl.textContent += text.charAt(i);
+        i++;
+        setTimeout(typing, 100);
+      } else {
+        dateEl.classList.add("cursor");
+      }
+    }
+    typing();
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        typeEffect();
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.1 });
+
+  observer.observe(dateEl);
+});
+
+
+</script>
+
+</body>
+</html>

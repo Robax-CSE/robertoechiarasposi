@@ -1,0 +1,694 @@
+/* ========================================================
+   BASE & PALETTE ORIGINALE
+======================================================== */
+body {
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+  color: #275C7A;
+  background: url('images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #F0F8FF;
+  background-blend-mode: lighten;
+}
+
+/* Offset per topbar fissa */
+html { scroll-behavior: smooth; }
+body { padding-top: 64px; }
+@media (max-width: 768px) { body { padding-top: 56px; } }
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  color: #275C7A;
+}
+h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  color: #275C7A;
+}
+
+/* ========================================================
+   TOP NAV (stile Puglia adattato ai tuoi colori)
+======================================================== */
+.topnav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(162, 212, 245, 0.92); /* #A2D4F5 con trasparenza */
+  backdrop-filter: saturate(140%) blur(8px);
+  border-bottom: 1px solid #7AB6E2;
+  z-index: 9999;
+}
+.topnav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+}
+.topnav .brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #275C7A;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  flex: 1 1 auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+}
+.nav-links a {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.92rem;
+  color: #275C7A;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: background-color .25s ease, color .25s ease, transform .05s ease;
+}
+.nav-links a:hover { background: rgba(39,92,122,0.12); }
+.nav-links a.active {
+  background: #275C7A;
+  color: #fff;
+}
+
+/* Toggle lingua nella topbar */
+.lang-toggle {
+  margin-left: auto;
+  border: 1px solid #7AB6E2;
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #275C7A;
+  line-height: 1;
+  transition: background-color .2s ease, border-color .2s ease, transform .05s ease;
+}
+.lang-toggle:hover { background: #F0F8FF; }
+.lang-toggle:active { transform: translateY(1px); }
+
+/* ========================================================
+   HERO
+======================================================== */
+.hero {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background: url('images/backheader.png') center center / cover no-repeat;
+  background-attachment: scroll;
+  overflow: hidden;
+  margin-top: 0; /* evita sovrapposizione con topbar */
+}
+.hero-content {
+  padding: 1rem;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 0;
+}
+.hero-date {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.7rem 1.5rem;
+  border-radius: 12px;
+  margin-top: 0.5rem;
+  animation: pulse-glow 2.5s ease-in-out infinite;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  position: relative;
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 14px 6px rgba(0, 0, 0, 0.5); }
+  50% { box-shadow: 0 0 30px 12px rgba(255, 255, 255, 1); }
+}
+
+/* ========================================================
+   FADE-IN SECTIONS (base)
+======================================================== */
+section {
+  max-width: 800px;
+  margin: 5rem auto;
+  padding: 1rem 1rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+section.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+section p {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+/* ========================================================
+   SEZIONI A RIGA UNICA: AUTO-LAYOUT
+======================================================== */
+/* default: sezione solo testo (full-width) */
+.section-row .section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 22px;
+  text-align: left;
+}
+
+/* se la sezione HA media → layout orizzontale */
+.section-row:has(.section-media) .section-inner {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+/* alterna (immagine a destra) con .reverse */
+.section-row.reverse:has(.section-media) .section-inner {
+  flex-direction: row-reverse;
+}
+
+/* colonne quando c'è media */
+.section-row .section-media {
+  flex: 0 0 clamp(260px, 40%, 420px);
+}
+.section-row .section-text {
+  flex: 1 1 auto;
+}
+
+/* stack su mobile */
+@media (max-width: 768px) {
+  .section-row:has(.section-media) .section-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* immagini coerenti */
+.section-row img,
+.section-row .collage-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  margin: 0;
+}
+
+/* pulizia wrapper media */
+.section-row .honeymoon-image-wrapper,
+.section-row .collage-wrapper {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+}
+
+/* il <section> non limita la larghezza: ci pensa .section-inner */
+section.section-row {
+  max-width: none;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+/* respiro laterale su schermi medi */
+@media (max-width: 1140px) {
+  .section-row .section-inner { padding-left: 16px; padding-right: 16px; }
+}
+
+/* ========================================================
+   SEZIONI SPECIFICHE (palette originale)
+======================================================== */
+.section-story { background-color: #D8E8FC; }
+.section-details { background-color: #FFF7E6; }
+
+.wedding-date {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff6905;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+}
+.wedding-date.cursor::after {
+  content: "|";
+  margin-left: 4px;
+  animation: blink-caret 0.8s step-end infinite;
+}
+@keyframes blink-caret {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.section-rsvp { background-color: #EAF6F1; }
+
+.section-gallery { background-color: #F3ECFA; }
+section#gallery p {
+  font-style: italic;
+  color: #275C7A;
+  opacity: 0.85;
+}
+.collage-wrapper { border-radius: 12px; overflow: hidden; }
+
+.section-gifts {
+  background-color: #FDECEF;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #275C7A;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-top: 1rem;
+}
+
+.section-puglia { background: #FAF5E6; }
+.section-puglia .puglia-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 28px;
+  background: #f28e1c;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.section-puglia .puglia-btn:hover {
+  background: #d97706;
+  transform: scale(1.05);
+}
+
+/* ========================================================
+   FOOTER
+======================================================== */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  background: #A2D4F5;
+  color: #275C7A;
+}
+.footer-note {
+  font-size: 0.8rem;
+  color: #144e75;
+  opacity: 0.7;
+  margin-top: 0.5rem;
+}
+
+/* ========================================================
+   RESPONSIVE EXTRAS (generali)
+======================================================== */
+.story-image {
+  max-width: none !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12) !important;
+}
+@media (max-width: 768px) {
+  .lang-toggle {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+  .hero {
+    height: auto;
+    padding: 3rem 1rem 1.5rem;
+    flex-direction: column;
+  }
+  .nav-links { gap: 4px; }
+  .nav-links a { padding: 8px 10px; font-size: 0.85rem; }
+}
+
+/* ========================================================
+   DETTAGLI: CARD, MAPPE, ADDRESS
+======================================================== */
+.section-details .location-block {
+  background: rgba(255,255,255,0.55);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.section-details .location-block h3 {
+  margin: 0 0 8px 0;
+  color: #275C7A;
+  font-size: 1.05rem;
+}
+.section-details .map-frame {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  margin-bottom: 10px;
+}
+.section-details .map-frame iframe {
+  display: block;
+  width: 100%;
+  height: 280px;
+  border: 0;
+}
+.section-details .address {
+  margin: 0;
+  line-height: 1.5;
+  color: #275C7A;
+  opacity: .9;
+}
+
+.extra-info {
+  margin-top: 1.5rem;
+  padding: 1.1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.extra-info .puglia-btn {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+
+/* ========================================================
+   MOBILE FIRST FIX PACK
+======================================================== */
+/* 1) Topbar: tabs scrollabili a swipe + snap */
+.topnav-inner { gap: 10px; }
+.nav-links {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  gap: 6px;
+  padding-bottom: 4px; /* spazio per la scrollbar su iOS */
+}
+.nav-links a {
+  scroll-snap-align: start;
+  flex: 0 0 auto;          /* evita che si comprimano troppo */
+  padding: 8px 10px;
+}
+@media (max-width: 768px) {
+  .brand { display: none; } /* più spazio ai tab su schermi piccoli */
+}
+
+/* 2) Sezioni “a riga”: su mobile vanno SEMPRE in colonna (niente :has) */
+@media (max-width: 768px) {
+  .section-row .section-inner {
+    display: block !important;   /* override eventuale flex */
+    padding: 20px 16px;
+    text-align: left;
+  }
+  .section-row .section-media { margin-bottom: 14px; }
+  .section-row .section-text  { width: 100%; }
+}
+
+/* 3) Immagini sempre responsive */
+.section-row .section-media img,
+.section-row .collage-wrapper img,
+.section-row .honeymoon-image-wrapper img,
+.section-puglia .puglia-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* 4) Mappe responsive (iframe 16:9) */
+.map-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;     /* moderno */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+.map-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+/* fallback vecchi browser: usa padding-top se aspect-ratio non c’è */
+@supports not (aspect-ratio: 16 / 9) {
+  .map-frame { height: 0; padding-top: 56.25%; }
+  .map-frame iframe { position: absolute; top:0; left:0; height:100%; }
+}
+
+/* 5) Griglia location: mobile default + desktop a 2 colonne */
+.section-details .location-wrapper {
+  display: grid !important;
+  grid-template-columns: 1fr;     /* mobile default: una colonna */
+  gap: 16px;
+}
+@media (min-width: 900px) {
+  .section-details .location-wrapper {
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    gap: 24px;
+  }
+}
+.section-details .location-block { min-width: 0; } /* evita overflow */
+
+/* 6) Spaziature generali più compatte su mobile */
+@media (max-width: 768px) {
+  section.section-row { margin: 3.5rem 0; }
+  h1 { font-size: clamp(1.8rem, 6vw, 2.4rem); }
+  h2 { font-size: clamp(1.4rem, 5vw, 1.9rem); }
+  .wedding-info { font-size: 1.1rem; padding: 1rem; }
+}
+
+/* 7) Sicurezza: niente contenuti che “escano” dal viewport */
+* { word-wrap: break-word; }
+img, iframe { max-width: 100%; }
+
+/* 8) MOBILE: mostra TUTTI i bottoni senza swipe */
+@media (max-width: 768px) {
+  .topnav-inner { display: block; padding: 8px 10px; }
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;           /* ⬅️ va a capo */
+    justify-content: center;
+    gap: 8px 10px;
+    overflow: visible;
+    white-space: normal;
+    padding: 0;
+    position: static;
+  }
+  .nav-links a {
+    flex: 0 1 auto;
+    padding: 8px 12px;
+    font-size: 0.86rem;
+  }
+  .lang-toggle {
+    position: static;
+    display: inline-block;
+    margin: 8px auto 0;
+    width: auto;
+    text-indent: 0;
+    padding: 6px 12px;
+  }
+  .nav-links::after { content: none !important; }
+}
+
+/* 9) XS: riduciamo leggermente per farceli stare tutti */
+@media (max-width: 420px) {
+  .nav-links a {
+    padding: 7px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/* ========================================================
+   STORY: bigger image on desktop (override mirato)
+======================================================== */
+@media (min-width: 1024px) {
+  .section-story.section-row .section-inner {
+    max-width: 1200px !important;
+  }
+  .section-story.section-row .section-media {
+    flex: 0 1 clamp(480px, 50vw, 760px) !important;
+  }
+  .section-story.section-row .section-media img.story-image {
+    width: 100% !important;
+    max-width: none !important;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  .section-story.section-row .section-text {
+    max-width: 65ch;
+  }
+}
+
+/* ========================================================
+   CENTRATURE SEZIONI (Dettagli / Conferma)
+======================================================== */
+.section-details h2,
+.section-details .wedding-date{
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section-details h2 { margin-bottom: 1rem; }
+.section-details .wedding-date { margin-bottom: 2rem; }
+
+/* Conferma: titolo, testo, link centrati */
+.section-rsvp { text-align: center; }
+.section-rsvp h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.section-rsvp p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+}
+.section-rsvp a {
+  display: block;               /* prende tutta la riga */
+  width: fit-content;           /* solo quanto serve */
+  margin: 0 auto;               /* centra orizzontalmente */
+  background-color: #275C7A;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.section-rsvp a:hover {
+  background-color: #1f4b63;
+  transform: scale(1.03);
+}
+
+/* ========================================================
+   MOSTRA IL BRAND SU MOBILE (centrato)
+======================================================== */
+@media (max-width: 768px) {
+  .topnav .brand {
+    display: block !important;   /* annulla il display:none precedente */
+    text-align: center;
+    font-size: 1.05rem;          /* leggermente più piccolo */
+    line-height: 1.2;
+    margin: 2px 0 8px;
+    white-space: normal;
+  }
+  .topnav-inner { display: block; padding: 8px 10px; }
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 10px;
+    overflow: visible;
+    white-space: normal;
+    padding: 0;
+    position: static;
+  }
+  .lang-toggle {
+    position: static;
+    display: inline-block;
+    margin: 8px auto 0;
+    padding: 6px 12px;
+  }
+}
+
+/* ========================================================
+   SEZIONE REGALI - DETTAGLI BANCA
+======================================================== */
+.bank-details {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.bank-details h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #275C7A;
+  font-size: 1.05rem;
+}
+
+.bank-details p {
+  margin: 0.2rem 0;
+}
+
+.bank-separator {
+  border: none;
+  border-top: 2px dashed #275C7A;
+  margin: 1.2rem 0;
+  opacity: 0.4;
+}
+
+/* Immagine più grande solo in "Regali" */
+.section-gifts .honeymoon-image-wrapper img {
+  max-width: 500px; /* era probabilmente ~100% o meno */
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 900px) {
+  .section-gifts .section-media {
+    flex: 0 0 50%; /* più spazio alla colonna immagine */
+  }
+  .section-gifts .honeymoon-image-wrapper img {
+    max-width: 100%; /* occupa tutta la colonna su desktop */
+  }
+}
+
+
+
+/* Aggiusta da mobile - sezione nascosta */
+:root { --nav-h: 64px; }                   /* desktop height */
+@media (max-width: 768px) { :root { --nav-h: 105px; } }  /* mobile height */
+
+section[id], header.hero {
+  scroll-margin-top: calc(var(--nav-h) + 12px);
+}
+
+
+/* Non spezzare parole nei controlli / bottoni */
+.section-rsvp a,
+.nav-links a,
+button,
+.puglia-btn {
+  white-space: nowrap;
+  overflow-wrap: normal;  /* reset di word-wrap/overflow-wrap */
+  word-break: keep-all;
+}
+
+/* Evita font boosting solo su queste sezioni */
+.extra-info,
+.section-rsvp {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 1rem;       /* mantiene coerenza con gli altri paragrafi */
+  line-height: 1.6;
+}
+
+
+/*Altezza hero più compatta */
+/* Solo desktop view da mobile */
+@media (min-width: 769px) and (max-device-width: 768px) {
+  .hero {
+    height: 40vh;   /* o il valore che vuoi */
+    max-height: 400px; /* opzionale, per ulteriore limite */
+  }
+}
+
