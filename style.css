@@ -390,45 +390,28 @@ footer {
   margin-top: 1.8rem;
   padding: 1rem 2rem;
   border-radius: 50px;
-  border: 1px solid #333;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.5px;
 
-  /* ⭐ Azzurro acceso */
-  /*background: #3aa8ff;
-  color: #fff;*/
-
-  /* Glow */
-  box-shadow: 0 0 18px rgba(58, 168, 255, 0.4);
+  color: #ffffff;
+  background-color: #1f4b63;
+  box-shadow: 0 0 18px rgba(0, 18, 44, 0.4);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-  /* Pulse */
-  animation: pulse 1.6s infinite ease-in-out;
+  animation: pulseC 1.6s infinite ease-in-out;
 }
 
 .behind-scenes-btn:hover {
   transform: translateY(-3px) scale(1.07);
-  box-shadow: 0 0 26px rgba(58, 168, 255, 0.6);
+  box-shadow: 0 0 26px rgba(30,200,255,0.60);
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 16px rgba(58, 168, 255, 0.35);
-  }
-  50% {
-    transform: scale(1.08);
-    box-shadow: 0 0 26px rgba(58, 168, 255, 0.6);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 16px rgba(58, 168, 255, 0.35);
-  }
+@keyframes pulseC {
+  0%   { transform: scale(1);   box-shadow: 0 0 16px rgba(30,200,255,0.35); }
+  50%  { transform: scale(1.08); box-shadow: 0 0 26px rgba(30,200,255,0.55); }
+  100% { transform: scale(1);   box-shadow: 0 0 16px rgba(30,200,255,0.35); }
 }
-
-
 
 /* ========================================================
    MOBILE FIRST FIX PACK
