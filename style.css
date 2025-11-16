@@ -387,21 +387,30 @@ footer {
 ======================================================== */
 .behind-scenes-btn {
   display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: 999px;
-  border: 1px solid #333;
+  margin-top: 1.8rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 50px;
   text-decoration: none;
-  font-size: 0.95rem;
-  letter-spacing: 0.03em;
-  cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  
+  /* Colori eleganti */
+  color: #fff;
+  background: linear-gradient(135deg, #d4a373, #e6b68d, #f7d9b5);
+  border: none;
+
+  /* Effetti */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
 }
 
 .behind-scenes-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  opacity: 0.95;
 }
+
 
 /* ========================================================
    MOBILE FIRST FIX PACK
