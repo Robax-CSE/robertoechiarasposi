@@ -394,36 +394,39 @@ footer {
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.5px;
-  background: #ff6f85;
+
+  /* ⭐ Azzurro acceso */
+  background: #3aa8ff;
   color: #fff;
 
-  /* Effetti */
-  box-shadow: 0 0 18px rgba(255, 111, 133, 0.35);
+  /* Glow */
+  box-shadow: 0 0 18px rgba(58, 168, 255, 0.4);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-  /* Animazione pulse soft */
-  animation: pulse 1.8s infinite ease-in-out;
+  /* Pulse */
+  animation: pulse 1.6s infinite ease-in-out;
 }
 
 .behind-scenes-btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 0 26px rgba(255, 111, 133, 0.55);
+  transform: translateY(-3px) scale(1.07);
+  box-shadow: 0 0 26px rgba(58, 168, 255, 0.6);
 }
 
 @keyframes pulse {
   0% {
     transform: scale(1);
-    box-shadow: 0 0 16px rgba(255, 111, 133, 0.35);
+    box-shadow: 0 0 16px rgba(58, 168, 255, 0.35);
   }
   50% {
-    transform: scale(1.06);
-    box-shadow: 0 0 26px rgba(255, 111, 133, 0.55);
+    transform: scale(1.08);
+    box-shadow: 0 0 26px rgba(58, 168, 255, 0.6);
   }
   100% {
     transform: scale(1);
-    box-shadow: 0 0 16px rgba(255, 111, 133, 0.35);
+    box-shadow: 0 0 16px rgba(58, 168, 255, 0.35);
   }
 }
+
 
 
 /* ========================================================
