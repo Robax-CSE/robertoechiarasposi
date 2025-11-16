@@ -382,6 +382,26 @@ footer {
   margin-top: 8px;
 }
 
+/* ========================================================
+   Galleria - dietro le quinte
+======================================================== */
+.behind-scenes-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.behind-scenes-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
 
 /* ========================================================
    MOBILE FIRST FIX PACK
