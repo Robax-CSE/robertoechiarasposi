@@ -523,3 +523,83 @@ body { padding-top: 64px; } /* spazio per la topbar fissa su desktop */
   }
 }
 
+
+/* BEAUTY SECTION */
+.section-puglia.beauty {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff7fb; /* leggermente rosato, coerente con palette */
+}
+.section-puglia.beauty h2 {
+  color: #3a2d1f;
+}
+
+.beauty-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 960px;
+  margin: 40px auto 0;
+}
+
+@media (min-width: 900px) {
+  .beauty-grid {
+    grid-template-columns: 1fr 1fr; /* 2 colonne: parrucchieri / estetista */
+    align-items: start;
+  }
+}
+
+.beauty-group h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  margin: 0 0 18px;
+  color: #3d3024;
+  text-align: left;
+}
+
+.beauty-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px 26px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.beauty-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+  color: #3d3024;
+}
+
+.beauty-card p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: #444;
+  margin: 0 0 12px;
+}
+
+.beauty-meta {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.98rem;
+  color: #4f4f4f;
+}
+.beauty-meta li { margin-bottom: 6px; }
+.beauty-meta a { color: #f28e1c; text-decoration: none; }
+
+.beauty-link {
+  display: inline-block;
+  font-weight: bold;
+  color: #f28e1c;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.beauty-link:hover {
+  border-color: #f28e1c;
+}
+
