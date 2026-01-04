@@ -407,15 +407,34 @@ body { padding-top: 64px; } /* spazio per la topbar fissa su desktop */
     margin-left: 0;
   }
 
-  /* Nav links: row 2, full width */
-  .nav-links {
-    grid-column: 1 / -1;   /* span full width */
-    justify-content: center;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 8px;
-  }
 
+
+
+  
+  /* Nav links: row 2, full width */
+.nav-links {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+
+  justify-content: flex-start;   /* ← non center */
+  overflow-x: auto;              /* ← abilita swipe */
+  -webkit-overflow-scrolling: touch;
+
+  padding: 4px 6px 6px;
+  margin: 0;
+
+  scrollbar-width: none;         /* Firefox */
+}
+.nav-links::-webkit-scrollbar {
+  display: none;                 /* Chrome / Safari */
+}
+
+
+
+
+  
   .nav-links a {
     white-space: nowrap;
     padding: 8px 12px;
