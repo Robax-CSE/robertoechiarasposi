@@ -484,6 +484,11 @@
       if (entry.isIntersecting) {
         navLinks.forEach(a => a.classList.remove('active'));
         link.classList.add('active');
+        
+        // su mobile: porta in vista la voce attiva nella nav scrollabile
+        if (window.matchMedia("(max-width: 700px)").matches) {
+          link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
       }
     });
   }, {
